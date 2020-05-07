@@ -1,6 +1,10 @@
 # kotlin-jmh-playground
 
-status: broken. no clue how to make it work :)
+status: messy, but seem to work - finally.
+
+the trick is:
+
+code to be benchmarked must be in src/jmh/kotlin !
 
 see: 
 - https://medium.com/@imanushin/jmh-how-to-md-9b5df8959874

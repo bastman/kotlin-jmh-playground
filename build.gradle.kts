@@ -19,6 +19,14 @@ plugins {
     id("io.morethan.jmhreport") version "0.9.0"
 }
 
+sourceSets {
+    // see: https://dev.to/o_a_e/jmh-with-gradle--from-easy-to-simple-52ec
+    jmh {
+        //compileClasspath += sourceSets.test.runtimeClasspath
+        //runtimeClasspath += sourceSets.test.runtimeClasspath
+    }
+}
+
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.

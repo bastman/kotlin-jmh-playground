@@ -1,10 +1,9 @@
 package com.example
 
-
 import org.openjdk.jmh.annotations.Benchmark
 import java.util.*
 
-class JwtVerifyBenchmark {
+open class MyAwesomeBenchmark {
 
     @Benchmark
     fun foo() {
