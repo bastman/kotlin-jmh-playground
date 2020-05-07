@@ -7,6 +7,7 @@ see:
 - https://github.com/imanushin/use-performance-test
 - https://www.baeldung.com/java-microbenchmark-harness
 
+- https://github.com/skjolber/java-jwt-benchmark
 
 
 ```

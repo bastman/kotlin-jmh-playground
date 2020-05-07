@@ -16,6 +16,7 @@ plugins {
     //id("com.github.johnrengelman.shadow") version "5.2.0"
     id("com.github.ben-manes.versions") version "0.28.0"
     id("me.champeau.gradle.jmh") version "0.5.0"
+    id("io.morethan.jmhreport") version "0.9.0"
 }
 
 repositories {
@@ -50,6 +51,7 @@ application {
     mainClassName = "com.example.AppKt"
 }
 
+/*
 // there are several issues with JMH plugin on Windows (it doesn't have fork method, so jmh tries to simulates that):
 // 1. gradle daemons should be stopped before, so execute .\gradlew.bat --stop before
 // 2. jmh plugin is unable to compile code incrementally, so execute .\gradlew.bat clean before
@@ -57,3 +59,25 @@ application {
 jmh {
     jmhVersion = jmhLibraryVersion
 }
+*/
+
+jmh {
+    resultFormat = "JSON"
+
+    warmup = "1s" // Time to spend at each warmup iteration.
+    warmupIterations = 10
+
+    fork = 1
+    timeOnIteration = "5s"
+    iterations = 5
+    benchmarkMode = listOf("thrpt")
+
+    jvmArgs = listOf("-XX:+UseG1GC")
+}
+
+
+jmhReport {
+    jmhResultPath = project.file("build/reports/jmh/results.json").toString()
+    jmhReportOutput = project.file("build/reports/jmh").toString()
+}
+
