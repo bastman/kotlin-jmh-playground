@@ -3,8 +3,6 @@
  */
 package com.example
 
-import org.openjdk.jmh.annotations.Measurement
-
 //@Measurement
 class App {
     val greeting: String
@@ -15,5 +13,5 @@ class App {
 
 fun main(args: Array<String>) {
     println(App().greeting)
-   // org.openjdk.jmh.Main.main(args);
+    // org.openjdk.jmh.Main.main(args);
 }

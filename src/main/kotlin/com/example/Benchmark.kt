@@ -1,10 +1,17 @@
 package com.example
 
 
-import org.openjdk.jmh.annotations.*
-import java.nio.charset.Charset
+import org.openjdk.jmh.annotations.Benchmark
+import java.util.*
 
+class JwtVerifyBenchmark {
 
+    @Benchmark
+    fun foo() {
+        UUID.randomUUID()
+    }
+}
+/*
 class BenchMark {
     @State(Scope.Benchmark)
     class ExecutionPlan {
@@ -39,3 +46,4 @@ class BenchMark {
         // Do nothing
     }
 }
+*/
