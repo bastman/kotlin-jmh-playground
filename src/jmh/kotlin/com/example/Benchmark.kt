@@ -7,7 +7,8 @@ open class MyAwesomeBenchmark {
 
     @Benchmark
     fun foo() {
-        UUID.randomUUID()
+        //UUID.randomUUID()
+        App.methodToBeBenchmarked()
     }
 }
 /*

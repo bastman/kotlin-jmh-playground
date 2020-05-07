@@ -3,15 +3,26 @@
  */
 package com.example
 
+import java.util.*
+
 //@Measurement
-class App {
+object App {
     val greeting: String
         get() {
             return "Hello world."
         }
+
+    fun main() {
+        println(App.greeting)
+    }
+
+    fun methodToBeBenchmarked() {
+        UUID.randomUUID()
+    }
+
 }
 
 fun main(args: Array<String>) {
-    println(App().greeting)
-    // org.openjdk.jmh.Main.main(args);
+    App.main()
+    //org.openjdk.jmh.Main.main(args);
 }
