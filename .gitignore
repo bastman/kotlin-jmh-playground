@@ -1,0 +1,16 @@
+# Gradle
+# ------
+.gradle
+build/
+out/
+/buildSrc/build
+
+# idea
+.idea
+*.iml
+
+# osx
+.DS_Store
+
+# Ignore Gradle build output directory
+build
