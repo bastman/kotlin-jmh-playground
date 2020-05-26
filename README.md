@@ -17,3 +17,5 @@ see:
 ```
 $ ./gradlew jmh
 ```
+
+you may want to check this project on how to jmh: https://github.com/michaelbull/kotlin-result/blob/master/build.gradle.kts#L36
